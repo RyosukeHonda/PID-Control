@@ -1,4 +1,4 @@
-# Install script for directory: /Users/Ryosuke/Downloads/CarND-PID-Control-Project-master
+# Install script for directory: /Users/Ryosuke/Desktop/PID-Control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/Ryosuke/Downloads/CarND-PID-Control-Project-master/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/Ryosuke/Desktop/PID-Control/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
