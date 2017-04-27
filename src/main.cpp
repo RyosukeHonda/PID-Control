@@ -31,8 +31,8 @@ std::string hasData(std::string s) {
 }
 
 
-std::vector<double> p = {0.0,0.0,0.0};
-std::vector<double> dp = {1.0,1.0,1.0};
+std::vector<double> p = {0.14,0.0009,3.5};
+std::vector<double> dp = {0.01,0.0001,0.1};
 int idx = 0;
 int twiddle_count = 0;
 bool twiddle_on = false;
@@ -80,7 +80,7 @@ int main()
   //PI control pid.Init(0.05,0.006,0) is not good(go out of the track )
   //PD control pid.Init(0.05,0.0,4.5) runs the a bit right side of the road. and rot good at the turn;
   //PID controlpid.Init(0.14,0.0009,3.5) best so far
-  pid.Init(0.14,0.0009,3.5);
+  pid.Init(0.13,0.0009,3.5);
   pid_speed.Init(0.15,0.00012,1.5);
 
 
@@ -123,11 +123,11 @@ int main()
 
           if(!twiddle_on){
           std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
-          std::cout << "P: " << pid.p_error << "\t D: " << pid.d_error << "\t I: " << pid.i_error  << std::endl;
 
+          //std::cout << "P: " << pid.p_error << "\t I: " << pid.i_error << "\t D: " << pid.d_error  << std::endl;
+          //std::cout << "P_term: " << 0.13*pid.p_error << "\t I_term: " << 0.009*pid.i_error << "\t D_term: " <<  3.5*pid.d_error << std::endl;
+          //std::cout << "P_term: " << 0.15*pid_speed.p_error << "\t I_term: " << 0.00012*pid_speed.i_error << "\t D_term: " << 1.5*pid_speed.d_error  << std::endl;
 
-          std::cout << "P_term: " << 0.14*pid.p_error << "\t D_term: " << 3.5*pid.d_error << "\t I_term: " << 0.009*pid.i_error  << std::endl;
-          std::cout << "P_term: " << 0.15*pid_speed.p_error << "\t D_term: " << 1.5*pid_speed.d_error << "\t I_term: " << 0.00012*pid_speed.i_error  << std::endl;
           json msgJson;
           msgJson["steering_angle"] = steer_value;
           msgJson["throttle"] = throttle;
