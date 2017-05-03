@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/Ryosuke/Desktop/PID-Control
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/Ryosuke/Downloads/CarND-PID-Control-Project-master
 -- The C compiler identification is AppleClang 8.1.0.8020041
 -- The CXX compiler identification is AppleClang 8.1.0.8020041
 -- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/Ryosuke/Desktop/PID-Control/cmake-build-debug
+-- Build files have been written to: /Users/Ryosuke/Downloads/CarND-PID-Control-Project-master/cmake-build-debug

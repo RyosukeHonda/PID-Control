@@ -81,7 +81,7 @@ int main()
   //PD control pid.Init(0.05,0.0,4.5) runs the a bit right side of the road. and rot good at the turn;
   //PID controlpid.Init(0.14,0.0009,3.5) best so far
   pid.Init(0.13,0.0009,3.5);
-  pid_speed.Init(0.15,0.00012,1.5);
+  pid_speed.Init(0.15,0.00012,1.3);
 
 
 
@@ -110,7 +110,7 @@ int main()
           */
           double max_steering_angle = 1.0;
           pid.UpdateError(cte);
-          pid_speed.UpdateSpeedError(speed,45.0);
+          pid_speed.UpdateSpeedError(speed,60.0);
 
           steer_value = pid.TotalError();
           throttle = pid_speed.TotalError();
