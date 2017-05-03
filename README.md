@@ -25,7 +25,7 @@ Self-Driving Car Engineer Nanodegree Program
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./pid`. 
+4. Run it: `./pid`.
 
 ## Editor Settings
 
@@ -82,3 +82,13 @@ that's just a guess.
 
 One last note here: regardless of the IDE used, every submitted project must
 still be compilable with cmake and make./
+
+
+## Effect of P,I,D conponents
+P(Proportional gain): decrease the value of CTE(Cross Track Error) drastically. When the value of P is low, the car drives zigzag with high amount of steering angle (big overshoot), but the sign of steering angle doesn't change quickly (from + to - or - to +). When the value of P is high, the car also drives zigzag but in this case the overshoot is small. The sign of steering angle changes very quickly. When the P value is too high, the car will spin and can't drive on the right track.
+
+I(Integral gain): decreases the value of the lane offset.
+When the value of I is low, the offset will converge to 0 but very slowly (takes too much time to converge). In this simulator the car tends to drive on the right side of the road a bit when I is equal to 0. When the value of I is high, normal controller fluctuations will be exaggerated and the car easily drives off the track.
+
+D(Differential gain): respond to the angle change(lower the steering value).
+When the value of D is small which means the steering angle doesn't change so much because of differential gain, the car tends to drive zigzag (Underdamped). When the value of D is high, the car doesn't drive with oscillating, but it takes long time to correct for the offset properly(Overdamped).
