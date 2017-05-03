@@ -92,3 +92,7 @@ When the value of I is low, the offset will converge to 0 but very slowly (takes
 
 D(Differential gain): respond to the angle change(lower the steering value).
 When the value of D is small which means the steering angle doesn't change so much because of differential gain, the car tends to drive zigzag (Underdamped). When the value of D is high, the car doesn't drive with oscillating, but it takes long time to correct for the offset properly(Overdamped).
+
+## Final hyperparameters
+I chose parameters of PID as follows.
+Firstly I chose PID parameters by trial and error. When I found the car drives the track properly, I used twiddle to find the better parameters. Finally I got the parameters as following.
