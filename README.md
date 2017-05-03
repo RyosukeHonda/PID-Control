@@ -96,3 +96,6 @@ When the value of D is small which means the steering angle doesn't change so mu
 ## Final hyperparameters
 I chose parameters of PID as follows.
 Firstly I chose PID parameters by trial and error. When I found the car drives the track properly, I used twiddle to find the better parameters. Finally I got the parameters as following.
+P:0.13
+I:0.0009
+D:3.5
