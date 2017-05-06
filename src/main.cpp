@@ -110,7 +110,7 @@ int main()
           */
           double max_steering_angle = 1.0;
           pid.UpdateError(cte);
-          pid_speed.UpdateSpeedError(speed,60.0);
+          pid_speed.UpdateSpeedError(speed,45.0);
 
           steer_value = pid.TotalError();
           throttle = pid_speed.TotalError();
