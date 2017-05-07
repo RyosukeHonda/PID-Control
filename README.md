@@ -105,7 +105,8 @@ D:3.5
 
 
 ## Result
-Here is the link to the result video
+Here is the link to the result video.
+
 [https://youtu.be/Bg7_N8v0xHQ](https://youtu.be/Bg7_N8v0xHQ)
 
-I set the target speed to 70.0 in this video.
+I set the target speed to 70.0MPH in this video.
